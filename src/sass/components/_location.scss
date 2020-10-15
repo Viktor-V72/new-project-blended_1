@@ -18,8 +18,8 @@
 
 
 .location-items {
-   min-width: 220px;
-   min-height: 427px;
+   width: 220px;
+   height: 437px;
    padding: 43px 21px 43px 20px;
 
 
@@ -79,7 +79,7 @@
 
 .location-titles {
   font-weight: 500;
-  font-size: 16px;
+  font-size: 12px;
   line-height: 1.86;
   margin-top: 0;
   margin-bottom: 25px;
@@ -87,6 +87,10 @@
   color: $white;
 
   border-radius: 6px;
+
+  @media screen and(min-width: 768px) {
+     font-size: 16px;
+  }
 
   @media screen and(min-width: 768px) {
      margin-bottom: 30px;
@@ -98,15 +102,25 @@
   
 }
 .location-titles.two {
-   max-width: 138px;
-  height: 28px;
+  width: 130px;
+  min-height: 16px;
   background-color: #C2E297;
+
+  @media screen and(min-width: 768px) {
+     width: 138px;
+     height: 28px;
+  }
 }
 .location-titles.one,
 .location-titles.three {
-   max-width: 73px;
-   height: 28px;
+   width: 80px;
+   min-height: 16px;
    background-color: #F0D1A5;
+
+   @media screen and(min-width: 768px) {
+      width: 73px;
+      height: 28px;
+   }
 }
 
 .location-city,
@@ -169,8 +183,15 @@
 
     left: 0;
     bottom: 0px;
-
     background-color: #E1E1E1;
+
+@include for-size(tablet) {
+   min-width: 157px;
+}
+@include for-size(desktop) {
+   min-width: 234px;
+}
+
  }
  
  //.location-cards-content::after:hover {
