@@ -36,9 +36,9 @@
 
 
   .const{
+     outline: 2px solid red;
    background-color:#FFFFFF ;
-    width: 320px;
-    margin-left: auto;
+      margin-left: auto;
     margin-right: auto;
     padding-left: 20px;
     padding-right: 20px;
@@ -83,6 +83,8 @@
     padding-bottom: 26px;
     padding-left: 50px;
     padding-right: 50px;
+    margin-left: auto;
+    margin-right: auto;
     margin-top: 29px; 
     margin-bottom: 30px;
            @media screen and (min-width: 768px) {
@@ -138,12 +140,23 @@
 
     .const-item{
      position: absolute;
-     top: 0;
-     left: 0;
-      margin-top: 28px;
-      margin-left: 65px;
+     top: 34%;
+     left: 77%;
+     transform: translate(-50%, -50%) scale(1);
+      // margin-top: 28px;
+      // margin-left: 65px;
      fill: #E1E1E1;
+        @media screen and (min-width: 768px) {
+            top: 65%;
+            left: 32%;
         }
+          @media screen and (min-width: 1220px) {
+              top: 78%;
+              left: 22%;
+          }
+        }
+
+
 
 .fon-linc {
 // outline: 2px solid red;
