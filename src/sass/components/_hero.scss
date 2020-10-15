@@ -42,7 +42,7 @@
 
 .hero__container {
     padding-top: 193px;
-
+    
     @media screen and (min-width: 768px) {
     padding-top: 15px;
     }
@@ -123,14 +123,28 @@
     z-index: 2;
 }
 
-.hero__number-list::after {
-    display: absolute;
-    content: '';
-    z-index: 5;
-    background-repeat: no-repeat;
-    background-image: url('../images/hero/circle-tablet.png');
-    background-size: 15px 15px;
+// .circle {
+//     display: block;
+//     position: absolute;
+//     content: ' ';    
+//     background-image: url('../images/hero/circle-tablet.svg');
+//     background-repeat: no-repeat;
+//     background-size: 15px 15px;
 
+// }
+.hero__number-list {
+    
+    position: relative;
+
+    &:first-child {
+        margin-bottom: 13px;
+    }
+}
+.circle {
+    z-index: -1;
+    position: absolute;
+    top: 0;
+    right: -10px;
 }
 
 .number-list__text {
