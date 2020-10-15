@@ -19,24 +19,26 @@
         
         // Верстка для таблета
     @media screen and (min-width: 768px) {
-            height: 399px;
-            // padding-top: 15px;
+            height: 399px;            
             background-image: url('../images/hero/tablet-hero-ice-creamx1.png'), 
         url('../images/hero/tasty-tabletx1.png'),
         url('../images/hero/milk-tabletx1.png'), 
         url('../images/hero/elipse-svg_tablet.svg');
         background-position: 378px bottom, right 34px bottom, left 34px bottom 28px, right 137px bottom 46px;
         background-size: 143px 336px, 168px 133px, 124px 126px, 324px 322px;
+
         // Для дисплеев х2 в таблет версии
         @media screen and (min-device-pixel-ratio: 2),
         screen and (-webkit-min-device-pixel-ratio: 2),
         screen and (-o-min-device-pixel-ratio: 2/1),
         screen and (min-resolution: 192dpi),
         screen and (min-resolution: 2dppx) {
-        background-image: url('../images/hero/hero-ice-creamx2.png'), 
+        background-image: url('../images/hero/hero-ice-creamx2.png'),
+        url('../images/hero/tasty-tabletx2.png'), 
+        url('../images/hero/milk-tabletx2.png'),
         url('../images/hero/elipse-svg_tablet.svg');
-        background-position: 378px bottom, right 137px bottom 46px;
-        background-size: contain, contain;}
+        background-position: 378px bottom, right 34px bottom, left 34px bottom 28px, right 137px bottom 46px;
+        background-size: 143px 336px, 168px 133px, 124px 126px, 324px 322px;}
         }    
 }
 
@@ -122,7 +124,7 @@
     text-align: right;
     z-index: 2;
 }
-
+// Декоративные кружочки
 .sml-size::after {
     display: block;
     position: absolute;
@@ -139,7 +141,6 @@
 }
 
 .hero__number-list {
-    
     position: relative;
 
     &:first-child {
@@ -159,7 +160,7 @@
     width: 115px;
     height: 74px;    
 }
-
+// Кнопка со стрелкой
 .hero-btn-link {
     display: block;
     margin-top: 7px;
