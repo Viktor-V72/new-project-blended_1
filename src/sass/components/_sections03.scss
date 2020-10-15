@@ -3,6 +3,7 @@
 
 
  .home {
+  
   //  outline: 2px solid red;
   display: flex;
   justify-content: center;
@@ -36,6 +37,7 @@
 
 
   .const{
+  
      outline: 2px solid red;
    background-color:#FFFFFF ;
       margin-left: auto;
@@ -58,9 +60,11 @@
      padding-top: 123px;
      padding-bottom: 132px;
   }
-                      }       
+                      }   
+ 
                                      // слайдер начало
   .testimo{
+    outline: 2px solid red;
       display: flex;
       border-radius: 44px;
     justify-content: center;
@@ -71,6 +75,7 @@
                                // слайдер конец
 
 .fon{
+  outline: 2px solid red;
   // outline: 2px solid red;
       position: relative;
   justify-content: center;
@@ -92,6 +97,7 @@
                           }} 
 
     .fon-2{
+      outline: 2px solid red;
        position: relative;
     justify-content: center;
    text-align: center;
@@ -116,6 +122,7 @@
     }
 
 .fon-3{
+  outline: 2px solid red;
   position: relative;
     justify-content: center;
    text-align: center;
@@ -137,29 +144,27 @@
                           }
 }
 
-
     .const-item{
+      width: 55px;
+      height: 40px;
+      outline: 2px solid red;
      position: absolute;
-     top: 34%;
-     left: 77%;
+     top: 16%;
+     left: 33%;
      transform: translate(-50%, -50%) scale(1);
-      // margin-top: 28px;
-      // margin-left: 65px;
-     fill: #E1E1E1;
+       fill: #E1E1E1;
         @media screen and (min-width: 768px) {
-            top: 65%;
-            left: 32%;
+            top: 32%;
+            left: 13%;
         }
           @media screen and (min-width: 1220px) {
-              top: 78%;
-              left: 22%;
+              top: 38%;
+              left: 9%;
           }
         }
 
-
-
 .fon-linc {
-// outline: 2px solid red;
+outline: 2px solid red;
  position: relative;
  font-family: DM Sans;
 font-style: normal;
@@ -187,6 +192,7 @@ color: #000000;}
 }  
 
 .line::after {
+  outline: 2px solid red;
   content: "";
   position: absolute;
   left: 0;
@@ -197,10 +203,8 @@ color: #000000;}
 }
 
 
-
- 
-
  .ul-item-red{
+   outline: 2px solid red;
  display: flex;
   justify-content: center;
   align-items: center;
@@ -209,6 +213,7 @@ color: #000000;}
  }
 
 .item-red{
+  outline: 2px solid red;
  display: flex;
   justify-content: center;
   align-items: center;
@@ -217,6 +222,7 @@ color: #000000;}
     }
 
  .li-item-red{
+   outline: 2px solid red;
    background-color:  #D31342;
    border: transparent;
     width: 4px;
@@ -228,6 +234,7 @@ color: #000000;}
 
 
 .const-name{
+  outline: 2px solid red;
   display: flex;
   justify-content: center;
   text-align: center;
@@ -257,11 +264,8 @@ margin-bottom: 35px;
 }
 } 
 
-
-
-
-
 .dom-item{
+  outline: 2px solid red;
   width: 12px;
   height: 12px;
    fill: #D9D9D9;
@@ -271,6 +275,7 @@ margin-bottom: 35px;
  }
 }
 .svg-dom{
+  outline: 2px solid red;
    display: flex;
   justify-content: center;
   align-items: center;
@@ -279,6 +284,7 @@ margin-bottom: 35px;
  
 }
 .svg-dom-item{
+  outline: 2px solid red;
    background-color: #D9D9D9; ;
   width: 12px;
   height: 12px;
