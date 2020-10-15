@@ -1,5 +1,6 @@
 .location {
    background-color: $pink-bcg;
+
    margin-top: 84px; 
 
      @include for-size(tablet) {
@@ -14,12 +15,21 @@
    display: flex;
    flex-wrap: wrap;
    justify-content: center;
+
+
+   @include for-size(tablet) {
+      margin-top: -78px;
+   }
+   @include for-size(desktop) {
+      margin-top: -102px;
+   }
 }
 
 .location-items {
    width: 220px;
    height: 437px;
    padding: 43px 21px 43px 20px;
+
 
    margin-bottom: 20px;
    border-radius: 24px;
