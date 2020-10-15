@@ -123,15 +123,21 @@
     z-index: 2;
 }
 
-// .circle {
-//     display: block;
-//     position: absolute;
-//     content: ' ';    
-//     background-image: url('../images/hero/circle-tablet.svg');
-//     background-repeat: no-repeat;
-//     background-size: 15px 15px;
+.sml-size::after {
+    display: block;
+    position: absolute;
+    top: 0;
+    right: -10px;
+    width: 15px;
+    height: 15px;
+    z-index: -1;
+    content: ' ';    
+    background-image: url('../images/hero/circle-tablet.svg');
+    background-repeat: no-repeat;
+    background-size: 15px 15px;
+    overflow: visible;
+}
 
-// }
 .hero__number-list {
     
     position: relative;
@@ -139,12 +145,6 @@
     &:first-child {
         margin-bottom: 13px;
     }
-}
-.circle {
-    z-index: -1;
-    position: absolute;
-    top: 0;
-    right: -10px;
 }
 
 .number-list__text {
