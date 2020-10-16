@@ -9,14 +9,16 @@
    @include for-size(desktop) {
       margin-top: 102px;
    }
-@media screen and(min-width: 1280px) {
-   background-image: url('/images/location-icons/location-bg-desktop@2x.png'),
-      url('/images/location-icons/location-bg-desktop@1x.png'),
-      url('/images/location-icons/location-bg-desktop.svg');
+   
+   @media screen and(min-width: 1280px) {
+      background-image: url('/images/location-icons/location-bg-desktop@2x.png'),
+                        url('/images/location-icons/location-bg-desktop@1x.png'),
+                        url('/images/location-icons/location-bg-desktop.svg');
 
       background-repeat: no-repeat;
       background-size: contain;
-}
+   }
+      
 }
 
 .location-list {
@@ -297,7 +299,7 @@
 }
 
 .location-btn:hover {
-    background-color: #c7133e;
+    background-color: #C7133E;
  }
 
 .location-btn.white {
