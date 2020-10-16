@@ -113,14 +113,14 @@
    min-height: 16px;
    background-color: #F0D1A5;
 
-   @media screen and(min-width: 768px) and(max-width: 1219px) {
+   @media screen and(min-width: 768px)  {
       width: 73px;
       height: 28px;
+     font-size: 16px;
    }
   }
 
-  @media screen and(min-width: 768px) and(max-width: 1219px) {
-     font-size: 16px;
+  @media screen and(min-width: 768px) {
      margin-bottom: 30px;
   }
 
@@ -135,7 +135,7 @@
   min-height: 16px;
   background-color: #C2E297;
 
-  @media screen and(min-width: 768px) and(max-width: 1219px) {
+  @media screen and(min-width: 768px) {
      width: 138px;
      height: 28px;
   }
