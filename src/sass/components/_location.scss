@@ -31,7 +31,12 @@
    margin-bottom: 20px;
    border-radius: 24px;
    background-color: $white;
-   box-shadow: 0px 8px 30px rgba(212, 20, 67, 0.1);
+   &:focus,
+   &:hover,
+   &:active {
+      box-shadow: 0px 8px 30px rgba(212, 20, 67, 0.1);
+   }
+   
 
    @include for-size(mobile){
       &:first-child {
@@ -281,7 +286,7 @@
 }
 
 .location-btn:hover {
-    background-color: #D41342;
+    background-color: C7133E;
  }
 
 .location-btn.white {
@@ -299,6 +304,7 @@ background-color: #fff;
 
 .location-btn.white:hover {
    background-color: $button-bcg;
+  
 }
 
 .location-btn-text-pink {
