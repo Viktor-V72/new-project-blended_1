@@ -9,9 +9,11 @@
    @include for-size(desktop) {
       margin-top: 102px;
 
+
       background-image: url('/images/location-icons/location-bg-desktop@2x.png'),
       url('/images/location-icons/location-bg-desktop@1x.png'),
       url('/images/location-icons/location-bg-desktop.svg');
+
       background-repeat: no-repeat;
       background-size: cover;
       background-position: top 10px left ;
@@ -313,7 +315,7 @@ background-color: #fff;
 }
 
 .location-btn.white:hover {
-   background-color: $button-bcg;
+  background-color: fff;
   
 }
 
