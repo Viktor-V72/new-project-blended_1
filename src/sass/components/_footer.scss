@@ -7,7 +7,9 @@
 
     @include for-size(tablet) {
     display: flex;
-    
+}
+    @include for-size(desktop) {
+    display: flex;
 }
 }
 
@@ -18,6 +20,9 @@
 }
     @include for-size(tablet) {
     width: 340px;
+}
+    @include for-size(desktop) {
+    min-width: 477px;
 }
 }
 
@@ -33,6 +38,9 @@
      @include font("Titan One", normal, normal, 26px, 30px, 0.04em);
     }
 
+    @include for-size(desktop) {
+    @include font("Titan One", normal, normal, 30px, 34px, 0.04em);
+    }
 
     &--big{
      @include font("Titan One", normal, normal, 34px, 39px, 0);
@@ -46,7 +54,11 @@
     @include font("Titan One", normal, normal, 48px, 55px, 0.06em);
     margin-top: 17px;
     }
-    } 
+
+    @include for-size(desktop) {
+    @include font("Titan One", normal, normal, 58px, 66px, 0.06em);
+    }
+}
 }
 
 
@@ -62,6 +74,10 @@
     margin-left: 198px;
     }
 
+    @include for-size(desktop) {
+    margin-top: 0;
+    margin-left: 405px;
+    }
 }
 
 .social__item {
@@ -79,7 +95,14 @@
     margin-right: 30px;
     }
 }
+
+    @include for-size(desktop) {
+    &:not(:last-child) {
+    margin-right: 24px;
+    }
 }
+}
+
 
 .social__icon:hover,
 .social__icon:focus{
@@ -108,6 +131,11 @@
     @include font("DM Sans", normal, 700, 14px, 26px, 0);
     }
 
+    @include for-size(desktop) {
+    @include font("DM Sans", normal, 700, 16px, 30px, 0.02em);
+    margin-top: 50px;
+    }
+
   
 }
 
@@ -132,6 +160,10 @@
     @include font("DM Sans", normal, 700, 14px, 26px, 0.02em);
     margin-top: 91px;
     }
+    @include for-size(desktop) {
+    @include font("DM Sans", normal, 700, 14px, 26px, 0.02em);
+     margin-top: 97px;
+    }
 }
 
 
@@ -143,6 +175,16 @@ margin: 0 auto;
 @include for-size(tablet) {
     max-width: 100%;
     }
+@include for-size(desktop) {
+    max-width: 100%;
+    }
+
+}
+
+.desk-width{
+    @include for-size(desktop) {
+    width: 1050px;
+}
 }
 
 
