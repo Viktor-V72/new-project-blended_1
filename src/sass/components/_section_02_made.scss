@@ -12,17 +12,38 @@
   }
 
   &__container {
-    background-image: url(/images/section02/bcg_made1.png);
+    // background-image: url(../images/section02/bcg_made1.png);
     background-repeat: no-repeat;
-    background-position: center;
+    background-position: bottom;
     background-size: contain;
 
-    // @include for-size(tablet) {
-    //     display: none;
-    // }
+    @include for-size(mobile) {
+      background-image: url(../images/section02/bkg/bkg_made-320.png);
+
+      @media screen and (min-device-pixel-ratio: 2),
+        screen and (-webkit-min-device-pixel-ratio: 2),
+        screen and (-o-min-device-pixel-ratio: 2/1),
+        screen and (min-resolution: 192dpi),
+        screen and (min-resolution: 2dppx) {
+        background-image: url(../images/section02/bkg/bkg_made-320@2x.png);
+      }
+    }
+
+    @include for-size(desktop) {
+      background-image: url(../images/section02/bkg/bkg_made-1200.png);
+
+      @media screen and (min-device-pixel-ratio: 2),
+        screen and (-webkit-min-device-pixel-ratio: 2),
+        screen and (-o-min-device-pixel-ratio: 2/1),
+        screen and (min-resolution: 192dpi),
+        screen and (min-resolution: 2dppx) {
+        background-image: url(../images/section02/bkg/bkg_made-1200@2x.png);
+      }
+    }
   }
+
   &__description {
-    @include font('Titan One', normal, 400, 18px, 1.17, 0.04em);
+    @include font('Titan One', normal, 400, 18px, 1.17, 0);
     text-align: center;
     text-transform: uppercase;
     color: $pink;
@@ -50,6 +71,7 @@
 }
 .made__block1 {
   margin-top: 26px;
+
   @include for-size(tablet) {
     margin-top: 50px;
     display: flex;
@@ -63,22 +85,42 @@
 
   &__item {
     @include for-size(tablet) {
+      max-width: 340px;
       width: calc((100% - 1 * 18px) / 2);
     }
     @include for-size(desktop) {
+      max-width: 516px;
       width: calc((100% - 1 * 70px) / 2);
     }
   }
+
+  &--picture {
+    max-width: 280px;
+
+    @include for-size(tablet) {
+      max-width: 340px;
+    }
+    @include for-size(desktop) {
+      max-width: 516px;
+    }
+  }
+  &--text {
+    padding: 0 30px;
+
+    @include for-size(tablet) {
+      padding: 0;
+    }
+  }
+
   &__item__title {
     margin-top: 46px;
     margin-bottom: 0;
-    padding: 0 30px;
-    @include font('DM Sans', normal, 500, 12px, 1.58, 0.04em);
+
+    @include font('DM Sans', normal, 500, 12px, 1.60, 0);
     color: $black;
     @include for-size(tablet) {
       @include font('DM Sans', normal, 500, 14px, 1.79, 0.04em);
       margin-top: 50px;
-      padding: 0;
     }
     @include for-size(desktop) {
       @include font('DM Sans', normal, 500, 16px, 1.75, 0.04em);
@@ -86,9 +128,15 @@
   }
 
   &__item__text {
-    margin-top: 28px;
+    margin-top: 30px;
     margin-bottom: 0;
-    padding: 0 30px;
+    // padding: 0 30px;
+
+    &.paragraph {
+      display: block;
+      margin-top: 15px;
+      padding: 0;
+    }
     @include font('DM Sans', normal, 500, 12px, 1.58, 0.04em);
     color: $grey;
     @include for-size(tablet) {
@@ -105,7 +153,7 @@
   margin-top: 39px;
   @include for-size(mobile) {
     &__item:not(:first-child) {
-      margin-top: 38px;
+      margin-top: 37px;
     }
   }
   @include for-size(tablet) {
@@ -129,7 +177,7 @@
     }
   }
   &__title {
-    margin-top: 16px;
+    margin-top: 13px;
     @include font('Titan One', normal, 400, 36px, 1.14, 0.04em);
     text-transform: uppercase;
     color: $red;
@@ -143,9 +191,10 @@
     }
   }
   &__text {
-    margin-top: 20px;
+    margin-top: 13px;
     margin-bottom: 0;
-    @include font('DM Sans', normal, 700, 12px, 1.66, 0.04em);
+    padding-right: 50px;
+    @include font('DM Sans', normal, 700, 12px, 1.67, 0);
     color: $black;
 
     @include for-size(tablet) {
@@ -160,25 +209,33 @@
 }
 
 .button__made {
-  margin-top: 25px;
+  margin-top: 21px;
   margin-bottom: 0;
-  @include font('DM Sans', normal, 700, 16px, 1.31, 0.04em);
+
+  @include font('DM Sans', normal, 700, 16px, 1.31, 0);
   text-align: center;
   color: $red;
   padding-top: 12px;
   padding-bottom: 12px;
-  padding-left: 37px;
-  padding-right: 56px;
+  padding-left: 36px;
+  padding-right: 36px;
   background: $white;
+  border: none;
+  outline: transparent;
   border-radius: 22px;
-  border-color: transparent;
+
   @include for-size(tablet) {
     margin-top: 62px;
   }
+  &-arrow {
+    margin-left: 10px;
+    vertical-align: middle;
+  }
+  // &-icon {
+  //   display: block;
+  // }
   &:hover,
   &:focus {
-    color: $white;
-    background: $red;
-    border-color: transparent;
+    background: $button-bcg;
   }
 }
