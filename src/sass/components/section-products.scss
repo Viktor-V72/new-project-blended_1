@@ -22,6 +22,7 @@
     } 
 
     @include for-size(desktop) {
+        max-width: 1220px;
         padding-top: 127px;
         padding-bottom: 119px;
     } 
@@ -42,6 +43,12 @@
       @include for-size(tablet) {
         max-width: 100%;
       }
+
+      @include for-size(desktop) {
+        padding-right: 0;
+        padding-left: 0;
+        max-width: 100%;
+      }
 }
 
 .products-text {
@@ -56,10 +63,12 @@
 
     @include for-size(tablet) {
         @include font('Titan One', normal, normal, 26px, 1.15, 0);  
+        height: 30px;
     }
 
     @include for-size(desktop) {
         @include font('Titan One', normal, normal, 30px, 1.13, 0.04);  
+        height: 34px;
     }
 }
 
@@ -70,18 +79,20 @@
     text-align: center;    
     text-transform: uppercase;
     color: $red;
+    height: 36px;
     margin-bottom: 144px;
 
     @include for-size(tablet) {
         @include font('Titan One', normal, normal, 48px, 1.15, 0);  
-
-        margin-bottom: 130px;
+        height: 55px;
+        margin-bottom: 150px;
     }
     
 
     @include for-size(desktop) {
         @include font('Titan One', normal, normal, 58px, 1.14, 0.06);  
-        margin-bottom: 244px;
+        height: 66px;
+        margin-bottom: 259px;
     }
 }
 
@@ -102,9 +113,7 @@
 
     text-align: center;
     text-transform: uppercase;
-
     color: $white;
-
     margin-bottom: 30px;
 
     @include for-size(tablet) {
@@ -113,7 +122,9 @@
 
     @include for-size(desktop) {
         @include font('Titan One', normal, normal, 30px, 1.13, 0.04em);
+        height: 34px;
         margin-top: 38px;
+        margin-bottom: 32px;
     }
 }
 
@@ -121,9 +132,9 @@
     @include font('DM Sans', normal, bold, 14px, 1.5, 0.04em);
 
     max-width: 200px;
+    height: 124px;
     margin-right: auto;
     margin-left: auto;
-
     color: $white;
     margin-bottom: 30px;
 
@@ -156,7 +167,7 @@
 .product-list {
     position: relative;
     // max-width: 280px;
-    // max-height: 598px;
+    max-height: 485px;
     border-radius: 24px;
     padding-top: 161px;
     padding-bottom: 41px;
@@ -181,8 +192,8 @@
     // } 
     @include for-size(desktop) {
         width: 335px;
-        // max-height: 335px;
-        margin-right: 27px;
+        max-height: 525px;
+        
         margin-bottom: 0;
         padding-top: 134px;
         padding-bottom: 50px;
@@ -190,17 +201,26 @@
 }
 
 .product-list:not(:last-child) {
-    @media screen and (min-width: 319px) and (max-width: 767px){
+    @media screen and (max-width: 767px){
         margin-bottom: 129px;
     }
 }
 
 .product-list:first-child {
     background-color: $hero-bcg;
+
+    @include for-size(desktop) {
+        margin-right: 24px;
+    }
 }
 
 .product-list:nth-child(even) {
     background-color: #F0D1A5;
+
+    @include for-size(desktop) {
+        width: 337px;
+        margin-right: 23px;
+    }
 }
 
 .product-list:last-child {
@@ -216,8 +236,13 @@
 }
 
 .product-icon--link {
+    height: 6px;
     text-align: center;
     margin-bottom: 30px;
+
+    @include for-size(desktop) {
+        margin-bottom: 32px;
+    }
 }
 
 .product-image {
@@ -229,32 +254,56 @@
     left: 16px;
     z-index: 1;
 
-    @include for-size(mobile) {
+    // @include for-size(mobile)
+    @media screen and (max-width: 767px) {
         max-width: 249px;
+        max-height: 252px;
     }
 
     @include for-size(tablet) {
         width: 220px;
         left: 5px;
-        top: -104px;
+        // top: -104px;
 
-        &:nth-child(even) {
-            top: 100px;
-        }
+        // &:nth-child(even) {
+        //     top: 100px;
+        // }
     } 
     
     @include for-size(desktop) {
         width: 335px;
+        height: 335px;
         left: 5px;
         top: -200px;
     }
 }
 
+.product-image:first-child {
+    @include for-size(tablet) {
+        max-height: 226px;
+        top: -104px;
+    }
+}
+
 .product-image:nth-child(even) {
     @include for-size(tablet) {
-        top: 100px;
+        max-height: 233px;
+        top: -111px;
+
+    }
+
+    @include for-size(desktop) {
+        max-width: 337px;
+        max-height: 335px;
     }
 } 
+
+.product-image:last-child {
+    @include for-size(tablet) {
+        max-height: 224px;
+        top: -102px;
+    }
+}
 
 .product-icon--arrow {
     display: inline-block;
