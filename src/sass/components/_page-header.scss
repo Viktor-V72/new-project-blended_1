@@ -1,7 +1,6 @@
 .header {
   @include container(flex, flex-start, center);
   padding-top: 37px;
-  background-color: $hero-bcg;
 
   @include for-size(mobile-only) {
     padding-top: 10px;
