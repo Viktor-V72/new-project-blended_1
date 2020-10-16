@@ -1,0 +1,29 @@
+.fixed-header {
+  position: fixed;
+  top: 0;
+  z-index: 9;
+  width: 100%;
+  padding-top: 5px;
+  padding-bottom: 5px;
+  background-color: $hero-bcg;
+
+  @include for-size(tablet) {
+    padding-top: 19px;
+    padding-bottom: 18px;
+  }
+  @include for-size(desktop) {
+    padding-top: 19px;
+    padding-bottom: 18px;
+  }
+}
+
+.hero__container {
+  margin-top: 60px;
+
+  @include for-size(tablet) {
+    margin-top: 87px;
+  }
+  @include for-size(desktop) {
+    margin-top: 87px;
+  }
+}
