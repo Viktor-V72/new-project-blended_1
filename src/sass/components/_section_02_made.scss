@@ -1,0 +1,252 @@
+.section__made {
+  padding-top: 125px;
+  padding-bottom: 145px;
+  background-color: $pink-bcg;
+
+  @include for-size(tablet) {
+    padding-top: 130px;
+    padding-bottom: 246px;
+  }
+  @include for-size(desktop) {
+    padding-bottom: 310px;
+  }
+
+  // Background-image
+
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: contain;
+
+  @include for-size(mobile) {
+    background-image: url(../images/section02/bkg/bkg_made-320.png);
+
+    @media screen and (min-device-pixel-ratio: 2),
+      screen and (-webkit-min-device-pixel-ratio: 2),
+      screen and (-o-min-device-pixel-ratio: 2/1),
+      screen and (min-resolution: 192dpi),
+      screen and (min-resolution: 2dppx) {
+      background-image: url(../images/section02/bkg/bkg_made-320@2x.png);
+    }
+  }
+
+  @include for-size(desktop) {
+    background-image: url(../images/section02/bkg/bkg_made-1200.png);
+
+    @media screen and (min-device-pixel-ratio: 2),
+      screen and (-webkit-min-device-pixel-ratio: 2),
+      screen and (-o-min-device-pixel-ratio: 2/1),
+      screen and (min-resolution: 192dpi),
+      screen and (min-resolution: 2dppx) {
+      background-image: url(../images/section02/bkg/bkg_made-1200@2x.png);
+    }
+  }
+
+  &__description {
+    @include font('Titan One', normal, 400, 18px, 1.17, 0);
+    text-align: center;
+    text-transform: uppercase;
+    color: $pink;
+
+    @include for-size(tablet) {
+      @include font('Titan One', normal, 400, 26px, 1.15, 0em);
+    }
+    @include for-size(desktop) {
+      @include font('Titan One', normal, 400, 30px, 1.14, 0.04em);
+    }
+  }
+  &__title {
+    margin-top: 15px;
+    @include font('Titan One', normal, 400, 34px, 1.15, 0.04em);
+    text-align: center;
+    text-transform: uppercase;
+    color: $red;
+    @include for-size(tablet) {
+      @include font('Titan One', normal, 400, 48px, 1.15, 0.04em);
+    }
+    @include for-size(desktop) {
+      @include font('Titan One', normal, 400, 58px, 1.14, 0.06em);
+    }
+  }
+}
+.made__block1 {
+  margin-top: 26px;
+
+  @include for-size(tablet) {
+    margin-top: 50px;
+    display: flex;
+    justify-content: space-between;
+  }
+  @include for-size(desktop) {
+    margin-top: 55px;
+    padding: 0 68px;
+    display: flex;
+    justify-content: space-between;
+  }
+
+  &__item {
+    @include for-size(tablet) {
+      width: calc((100% - 1 * 20px) / 2);
+    }
+  
+  }
+
+  &--picture {
+    max-width: 280px;
+
+    @include for-size(tablet) {
+      max-width: 340px;
+    }
+    @include for-size(desktop) {
+      max-width: 516px;
+    }
+  }
+  &--text {
+    padding: 0 30px;
+
+    @include for-size(tablet) {
+      padding: 0;
+    }
+    @include for-size(desktop) {
+     
+      max-width: 463px;
+      padding: 0;
+    }
+  }
+
+  &__item__title {
+    margin-top: 46px;
+    margin-bottom: 0;
+
+    @include font('DM Sans', normal, 500, 12px, 1.6, 0);
+    color: $black;
+    @include for-size(tablet) {
+      @include font('DM Sans', normal, 500, 14px, 1.79, 0.04em);
+      margin-top: 50px;
+    }
+    @include for-size(desktop) {
+      @include font('DM Sans', normal, 500, 16px, 1.75, 0.04em);
+       margin-top: 50px;
+    }
+  }
+
+  &__item__text {
+    margin-top: 30px;
+    margin-bottom: 0;
+   
+    &.paragraph {
+      display: block;
+      margin-top: 15px;
+      padding: 0;
+      @include for-size(tablet) {
+        margin-top: 16px;
+      }
+      @include for-size(desktop) {
+        margin-top: 35px;
+      }
+    }
+    @include font('DM Sans', normal, 500, 12px, 1.58, 0.04em);
+    color: $grey;
+    @include for-size(tablet) {
+      margin-top: 28px;
+      padding: 0;
+      @include font('DM Sans', normal, 500, 14px, 1.77, 0.04em);
+    }
+    @include for-size(desktop) {
+      @include font('DM Sans', normal, 500, 14px, 1.93, 0.04em);
+    }
+  }
+}
+.made__block2 {
+  margin-top: 39px;
+  @include for-size(mobile) {
+    &__item:not(:first-child) {
+      margin-top: 37px;
+    }
+  }
+  @include for-size(tablet) {
+    margin-top: 65px;
+    display: flex;
+    justify-content: space-between;
+    
+  }
+  @include for-size(desktop) {
+    display: flex;
+    justify-content: space-between;
+  
+  }
+
+  &__item {
+    @include for-size(tablet) {
+      width: calc((100% - 2 * 80px) / 3);
+    }
+    @include for-size(desktop) {
+      width: calc((100% - 2 * 100px) / 3);
+    }
+  }
+  &__title {
+    margin-top: 13px;
+    @include font('Titan One', normal, 400, 36px, 1.14, 0.04em);
+    text-transform: uppercase;
+    color: $red;
+    @include for-size(tablet) {
+      margin-top: 36px;
+      @include font('Titan One', normal, 400, 48px, 1.15, 0.03em);
+    }
+    @include for-size(desktop) {
+      margin-top: 40px;
+      @include font('Titan One', normal, 400, 58px, 1.14, 0.04em);
+    }
+  }
+  &__text {
+    margin-top: 13px;
+    margin-bottom: 0;
+    padding-right: 50px;
+    @include font('DM Sans', normal, 700, 12px, 1.67, 0);
+    color: $black;
+
+    @include for-size(tablet) {
+      margin-top: 15px;
+      padding: 0px;
+      @include font('DM Sans', normal, 700, 14px, 1.71, 0.04em);
+    }
+    @include for-size(desktop) {
+      margin-top: 14px;
+       padding: 0px;
+      @include font('DM Sans', normal, 700, 16px, 1.71, 0.04em);
+    }
+  }
+}
+
+.button__made {
+  margin-top: 21px;
+  margin-bottom: 0;
+
+  @include font('DM Sans', normal, 700, 16px, 1.31, 0);
+  text-align: center;
+  color: $red;
+  padding-top: 12px;
+  padding-bottom: 12px;
+  padding-left: 36px;
+  padding-right: 36px;
+  background: $white;
+  border: none;
+  outline: transparent;
+  border-radius: 22px;
+
+  @include for-size(tablet) {
+    margin-top: 57px;
+  }
+ @include for-size(desktop) {
+    margin-top: 38px;
+  }
+
+  &-arrow {
+    margin-left: 10px;
+    vertical-align: middle;
+  }
+ 
+  &:hover,
+  &:focus {
+    background: $button-bcg;
+  }
+}

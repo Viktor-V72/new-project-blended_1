@@ -1,0 +1,157 @@
+.footer{
+    background-color: $pink-bcg;
+   
+}
+
+.flex__footer{
+
+    @include for-size(tablet) {
+    display: flex;
+    
+}
+}
+
+.footer__container{
+    
+    @include for-size(mobile) {
+    width: 254px;
+}
+    @include for-size(tablet) {
+    width: 340px;
+}
+}
+
+.footer__title{
+    
+    display: flex;
+    flex-wrap: wrap;
+    @include font("Titan One", normal, normal, 18px, 21px, 0);
+    text-transform: uppercase;
+    color: $pink;
+
+    @include for-size(tablet) {
+     @include font("Titan One", normal, normal, 26px, 30px, 0.04em);
+    }
+
+
+    &--big{
+     @include font("Titan One", normal, normal, 34px, 39px, 0);
+     color: $red;
+
+    @include for-size(mobile) {
+    margin-top: 17px;
+    }
+
+    @include for-size(tablet) {
+    @include font("Titan One", normal, normal, 48px, 55px, 0.06em);
+    margin-top: 17px;
+    }
+    } 
+}
+
+
+
+
+.social__links{
+    display: flex;
+    justify-content: flex-end;
+    margin-top: 43px;
+
+    @include for-size(tablet) {
+    margin-top: 0;
+    margin-left: 198px;
+    }
+
+}
+
+.social__item {
+
+    border-radius: 50%;
+    
+
+    @include for-size(mobile) {
+    &:not(:last-child) {
+    margin-right: 28px;
+  }
+}
+    @include for-size(tablet) {
+    &:not(:last-child) {
+    margin-right: 30px;
+    }
+}
+}
+
+.social__icon:hover,
+.social__icon:focus{
+    fill: $red;
+}
+
+
+.social__link{
+   display: block; 
+}
+
+.social__icon{
+    @include container(flex, center, center);
+
+    width: 32px;
+    height: 32px;
+    fill: $icon-foot;
+}
+
+.footer__contact{
+    @include font("DM Sans", normal, 700, 12px, 22px, 0);
+    text-align:right ;
+    margin-top: 46px;
+
+    @include for-size(tablet) {
+    @include font("DM Sans", normal, 700, 14px, 26px, 0);
+    }
+
+  
+}
+
+.number{
+    color: $red;
+    text-decoration:none ;
+}
+
+.footer__bot{
+
+    @include font("DM Sans", normal, 700, 14px, 21px, 0);
+    text-align: center;
+    
+    margin-top: 43px;
+    
+    padding-bottom: 25px;
+    padding-top: 22px;
+
+    border-top: 1px solid #E1E1E1;
+
+    @include for-size(tablet) {
+    @include font("DM Sans", normal, 700, 14px, 26px, 0.02em);
+    margin-top: 91px;
+    }
+}
+
+
+.rights{
+color: $grey;
+max-width: 150px;
+margin: 0 auto;
+
+@include for-size(tablet) {
+    max-width: 100%;
+    }
+}
+
+
+
+
+   
+
+
+
+
+
+
