@@ -58,7 +58,7 @@
         background-position: 378px bottom, right 34px bottom, left 34px bottom 28px, right 137px bottom 46px;
         background-size: 143px 336px, 168px 133px, 124px 126px, 324px 322px;}
         }   
-        
+        // Верстка для десктопа
     @media screen and (min-width: 1220px) {
         height: 665px;
         background-image: url('../images/hero/desktop-hero-ice-creamx1.png'), 
@@ -67,6 +67,20 @@
         url('../images/hero/elipse-svg_tablet.svg');
         background-position: 594px bottom, right 109px bottom, left 77px bottom 45px, left 475px bottom 75px;
         background-size: 236px 557px, 293px 232px, 188px 191px, 538px 538px;
+        // Для дисплеев х2
+        @media screen and (min-device-pixel-ratio: 2),
+        screen and (-webkit-min-device-pixel-ratio: 2),
+        screen and (-o-min-device-pixel-ratio: 2/1),
+        screen and (min-resolution: 192dpi),
+        screen and (min-resolution: 2dppx) {
+            background-image: url('../images/hero/desktop-hero-ice-creamx2.png'), 
+            url('../images/hero/tasty-desktopx2.png'),
+            url('../images/hero/milk-desktopx2.png'), 
+            url('../images/hero/elipse-svg_tablet.svg');
+            background-position: 594px bottom, right 109px bottom, left 77px bottom 45px, left 475px bottom 75px;
+            background-size: 236px 557px, 293px 232px, 188px 191px, 538px 538px;
+        }
+    
     } 
 }
 
@@ -96,6 +110,7 @@
         @media screen and (min-width: 768px) {
         @include font(Titan One, normal, normal, 34px, 0.91, 0.04em);
         }
+
         @media screen and (min-width: 1220px) {
            @include font(Titan One, normal, normal, 58px, 0.91, 0.04em)
         }
@@ -187,6 +202,7 @@
     text-align: right;
     z-index: 2;
 }
+
 // Декоративные кружочки
 .sml-size::after {
     display: block;
@@ -218,6 +234,10 @@
 
     &:first-child {
         margin-bottom: 13px;
+
+        @media screen and (min-width: 1220px) {
+            margin-bottom: 15px;
+        }
     }
 }
 
@@ -249,6 +269,10 @@
 .hero-btn-link {
     display: block;
     margin-top: 7px;
+
+    @media screen and (min-width: 1220px) {
+        margin-top: 20px;
+    }
 }
 
 
