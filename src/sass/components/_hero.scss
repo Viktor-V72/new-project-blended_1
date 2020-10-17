@@ -2,15 +2,14 @@
     width: 100%;
     margin-right: auto;
     margin-left: auto;
-    @include for-size(mobile) {
+@include for-size(mobile) {
     width: 320px;
     }
-    @include for-size(tablet) {
+@include for-size(tablet) {
     width: 768px;
     // padding-left: 34px;
     // padding-right: 34px;
   }
-
   @include for-size(desktop) {
     width: 1050px;
     // padding-left: 15px;
@@ -74,7 +73,7 @@
     @include font(Titan One, normal, normal, 26px, 1.15, 0.04em);
     text-transform: uppercase;
     color: $white;
-    
+       
     &--red {
         font-size: 48px;
         line-height: 0.96;
@@ -110,6 +109,10 @@
     transition-duration: 250ms;
     transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
 
+    &:hover, &:focus {
+        background-color: #C7133E;
+    }
+
     &:first-child {
         margin-right: 8px;
     }
@@ -117,6 +120,10 @@
     &--white {
         color: $red;
         background-color: $white;
+
+        &:hover, &:focus {
+            background-color: $button-bcg;
+        }
     }
 }
 
