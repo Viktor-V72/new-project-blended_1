@@ -1,4 +1,22 @@
 .hero__overlay {
+    width: 100%;
+    margin-right: auto;
+    margin-left: auto;
+@include for-size(mobile) {
+    width: 320px;
+    }
+@include for-size(tablet) {
+    width: 768px;
+    // padding-left: 34px;
+    // padding-right: 34px;
+  }
+  @include for-size(desktop) {
+    width: 1220px;
+    // padding-left: 15px;
+    // padding-right: 15px;
+  }
+
+
     background-color: $hero-bcg;      
     height: 502px;
     overflow: visible;
@@ -39,7 +57,31 @@
         url('../images/hero/elipse-svg_tablet.svg');
         background-position: 378px bottom, right 34px bottom, left 34px bottom 28px, right 137px bottom 46px;
         background-size: 143px 336px, 168px 133px, 124px 126px, 324px 322px;}
-        }    
+        }   
+        // Верстка для десктопа
+    @media screen and (min-width: 1220px) {
+        height: 665px;
+        background-image: url('../images/hero/desktop-hero-ice-creamx1.png'), 
+        url('../images/hero/tasty-desktopx1.png'),
+        url('../images/hero/milk-desktopx1.png'), 
+        url('../images/hero/elipse-svg_tablet.svg');
+        background-position: 594px bottom, right 109px bottom, left 77px bottom 45px, left 475px bottom 75px;
+        background-size: 236px 557px, 293px 232px, 188px 191px, 538px 538px;
+        // Для дисплеев х2
+        @media screen and (min-device-pixel-ratio: 2),
+        screen and (-webkit-min-device-pixel-ratio: 2),
+        screen and (-o-min-device-pixel-ratio: 2/1),
+        screen and (min-resolution: 192dpi),
+        screen and (min-resolution: 2dppx) {
+            background-image: url('../images/hero/desktop-hero-ice-creamx2.png'), 
+            url('../images/hero/tasty-desktopx2.png'),
+            url('../images/hero/milk-desktopx2.png'), 
+            url('../images/hero/elipse-svg_tablet.svg');
+            background-position: 594px bottom, right 109px bottom, left 77px bottom 45px, left 475px bottom 75px;
+            background-size: 236px 557px, 293px 232px, 188px 191px, 538px 538px;
+        }
+    
+    } 
 }
 
 .hero__container {
@@ -48,6 +90,10 @@
     @media screen and (min-width: 768px) {
     padding-top: 15px;
     }
+
+    @media screen and (min-width: 1220px) {
+        padding-top: 84px;
+    }
 }
    
 .hero__title {
@@ -55,7 +101,7 @@
     @include font(Titan One, normal, normal, 26px, 1.15, 0.04em);
     text-transform: uppercase;
     color: $white;
-    
+       
     &--red {
         font-size: 48px;
         line-height: 0.96;
@@ -64,11 +110,22 @@
         @media screen and (min-width: 768px) {
         @include font(Titan One, normal, normal, 34px, 0.91, 0.04em);
         }
+
+        @media screen and (min-width: 1220px) {
+           @include font(Titan One, normal, normal, 58px, 0.91, 0.04em)
+        }
     }
 
     @media screen and (min-width: 768px) {
         @include font(Titan One, normal, normal, 22px, 1.13, 0.04em);
     }
+
+    @media screen and (min-width: 1220px) {
+        @include font(Titan One, normal, normal, 38px, 1.15, 0.04em);
+        -webkit-text-stroke: 1px #000000;
+        text-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+    }
+
 }
 
 .hero__btn-list {
@@ -83,21 +140,38 @@
     display: inline-block;
     padding: 9px 14px 9px 14px;
     border-radius: 20px;
+
+
+    @media screen and (min-width: 1220px) {
+        @include font(DM Sans, normal, normal, 14px, 1.28, 0.04em);
+    }
     
     list-style-type: none;
     text-decoration: none;
 
-    transition: color;
+    transition: all;
     transition-duration: 250ms;
     transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
 
+    &:hover, &:focus {
+        background-color: #C7133E;
+        transform: scale(1.1);
+    }
+
     &:first-child {
         margin-right: 8px;
+        @media screen and (min-width: 1220px) {
+            margin-right: 15px;
+        }
     }
 
     &--white {
         color: $red;
         background-color: $white;
+
+        &:hover, &:focus {
+            background-color: $button-bcg;
+        }
     }
 }
 
@@ -118,12 +192,17 @@
 .hero__text { 
     @include font(DM Sans, normal, normal, 8px, 1.5, 0.04em);
     color: $white;
+
+    @media screen and (min-width: 1220px) {
+        @include font(DM Sans, normal, normal, 14px, 1.4, 0.04em);
+    }
 }
 
 .hero__rigth-list {
     text-align: right;
     z-index: 2;
 }
+
 // Декоративные кружочки
 .sml-size::after {
     display: block;
@@ -138,6 +217,16 @@
     background-repeat: no-repeat;
     background-size: 15px 15px;
     overflow: visible;
+    @media screen and (min-width: 1220px) {
+        width: 30px;
+        height: 30px;
+        background-image: url('../images/hero/circle-tablet.svg');
+    background-repeat: no-repeat;
+    background-size: 30px 30px;
+    overflow: visible;
+    }
+
+
 }
 
 .hero__number-list {
@@ -145,6 +234,10 @@
 
     &:first-child {
         margin-bottom: 13px;
+
+        @media screen and (min-width: 1220px) {
+            margin-bottom: 15px;
+        }
     }
 }
 
@@ -152,18 +245,34 @@
     @include font(Titan One, normal, normal, 28px, 1.14, 0.04em);
     text-transform: uppercase;
     color: $red;
+
+    @media screen and (min-width: 1220px) {
+        @include font(Titan One, normal, normal, 46px, 1.15, 0.04em);
+    }
+
 }
 
 .hero__paragraph {
-    margin-top: 66px;
-    margin-left: 154px;
+    margin-top: 54px;
+    margin-left: 134px;
     width: 115px;
-    height: 74px;    
+    height: 74px;
+    
+    @media screen and (min-width: 1220px) {
+        margin-top: 112px;
+        margin-left: 205px;
+        width: 205px;
+    }
 }
+
 // Кнопка со стрелкой
 .hero-btn-link {
     display: block;
     margin-top: 7px;
+
+    @media screen and (min-width: 1220px) {
+        margin-top: 20px;
+    }
 }
 
 
