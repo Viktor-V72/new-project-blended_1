@@ -117,83 +117,32 @@ parcelRequire = (function (modules, cache, entry, globalName) {
   }
 
   return newRequire;
-})({"../node_modules/parcel-bundler/src/builtins/bundle-url.js":[function(require,module,exports) {
-var bundleURL = null;
+})({"js/burger.js":[function(require,module,exports) {
+(function () {
+  var openBtnRef = document.querySelector('[data-button-open]');
+  var closeBtnRef = document.querySelector('[data-button-close]');
+  var mobileMenuRef = document.querySelector('[data-menu]');
+  var headerButton = document.querySelector('.header__outside');
+  openBtnRef.addEventListener('click', function () {
+    //const expanded =
+    //openBtnRef.getAttribute('aria-expanded') === 'true' || false;
+    //openBtnRef.classList.toggle('is-open');
+    openBtnRef.style.visibility = 'hidden';
+    headerButton.style.visibility = 'hidden'; //openBtnRef.setAttribute('aria-expanded', !expanded);
 
-function getBundleURLCached() {
-  if (!bundleURL) {
-    bundleURL = getBundleURL();
-  }
+    mobileMenuRef.classList.toggle('is-open');
+  });
+  closeBtnRef.addEventListener('click', function () {
+    //const expanded =
+    //closeBtnRef.getAttribute('aria-expanded') === 'true' || false;
+    //closeBtnRef.classList.toggle('is-open');
+    openBtnRef.style.visibility = 'initial';
+    headerButton.style.visibility = 'initial'; //closeBtnRef.setAttribute('aria-expanded', !expanded);
 
-  return bundleURL;
-}
-
-function getBundleURL() {
-  // Attempt to find the URL of the current script and use that as the base URL
-  try {
-    throw new Error();
-  } catch (err) {
-    var matches = ('' + err.stack).match(/(https?|file|ftp|chrome-extension|moz-extension):\/\/[^)\n]+/g);
-
-    if (matches) {
-      return getBaseURL(matches[0]);
-    }
-  }
-
-  return '/';
-}
-
-function getBaseURL(url) {
-  return ('' + url).replace(/^((?:https?|file|ftp|chrome-extension|moz-extension):\/\/.+)\/[^/]+$/, '$1') + '/';
-}
-
-exports.getBundleURL = getBundleURLCached;
-exports.getBaseURL = getBaseURL;
-},{}],"../node_modules/parcel-bundler/src/builtins/css-loader.js":[function(require,module,exports) {
-var bundle = require('./bundle-url');
-
-function updateLink(link) {
-  var newLink = link.cloneNode();
-
-  newLink.onload = function () {
-    link.remove();
-  };
-
-  newLink.href = link.href.split('?')[0] + '?' + Date.now();
-  link.parentNode.insertBefore(newLink, link.nextSibling);
-}
-
-var cssTimeout = null;
-
-function reloadCSS() {
-  if (cssTimeout) {
-    return;
-  }
-
-  cssTimeout = setTimeout(function () {
-    var links = document.querySelectorAll('link[rel="stylesheet"]');
-
-    for (var i = 0; i < links.length; i++) {
-      if (bundle.getBaseURL(links[i].href) === bundle.getBundleURL()) {
-        updateLink(links[i]);
-      }
-    }
-
-    cssTimeout = null;
-  }, 50);
-}
-
-module.exports = reloadCSS;
-},{"./bundle-url":"../node_modules/parcel-bundler/src/builtins/bundle-url.js"}],"sass/main.scss":[function(require,module,exports) {
-var reloadCSS = require('_css_loader');
-
-module.hot.dispose(reloadCSS);
-module.hot.accept(reloadCSS);
-},{"./..\\images\\hero\\hero-ice-creamx1.png":[["hero-ice-creamx1.0213121c.png","images/hero/hero-ice-creamx1.png"],"images/hero/hero-ice-creamx1.png"],"./..\\images\\hero\\elipse-svg.svg":[["elipse-svg.aaed0e01.svg","images/hero/elipse-svg.svg"],"images/hero/elipse-svg.svg"],"./..\\images\\hero\\hero-ice-creamx2.png":[["hero-ice-creamx2.1877dd52.png","images/hero/hero-ice-creamx2.png"],"images/hero/hero-ice-creamx2.png"],"./..\\images\\hero\\tablet-hero-ice-creamx1.png":[["tablet-hero-ice-creamx1.33cb4e1b.png","images/hero/tablet-hero-ice-creamx1.png"],"images/hero/tablet-hero-ice-creamx1.png"],"./..\\images\\hero\\tasty-tabletx1.png":[["tasty-tabletx1.98a48297.png","images/hero/tasty-tabletx1.png"],"images/hero/tasty-tabletx1.png"],"./..\\images\\hero\\milk-tabletx1.png":[["milk-tabletx1.7386bc8d.png","images/hero/milk-tabletx1.png"],"images/hero/milk-tabletx1.png"],"./..\\images\\hero\\elipse-svg_tablet.svg":[["elipse-svg_tablet.d8a1486e.svg","images/hero/elipse-svg_tablet.svg"],"images/hero/elipse-svg_tablet.svg"],"./..\\images\\hero\\tasty-tabletx2.png":[["tasty-tabletx2.1cc24b1c.png","images/hero/tasty-tabletx2.png"],"images/hero/tasty-tabletx2.png"],"./..\\images\\hero\\milk-tabletx2.png":[["milk-tabletx2.dce36bf2.png","images/hero/milk-tabletx2.png"],"images/hero/milk-tabletx2.png"],"./..\\images\\hero\\circle-tablet.svg":[["circle-tablet.0072cd88.svg","images/hero/circle-tablet.svg"],"images/hero/circle-tablet.svg"],"./..\\images\\section02\\bkg\\bkg_made-320.png":[["bkg_made-320.7d172018.png","images/section02/bkg/bkg_made-320.png"],"images/section02/bkg/bkg_made-320.png"],"./..\\images\\section02\\bkg\\bkg_made-320@2x.png":[["bkg_made-320@2x.eeb12ca9.png","images/section02/bkg/bkg_made-320@2x.png"],"images/section02/bkg/bkg_made-320@2x.png"],"./..\\images\\section02\\bkg\\bkg_made-1200.png":[["bkg_made-1200.c629809c.png","images/section02/bkg/bkg_made-1200.png"],"images/section02/bkg/bkg_made-1200.png"],"./..\\images\\section02\\bkg\\bkg_made-1200@2x.png":[["bkg_made-1200@2x.5bf91d9a.png","images/section02/bkg/bkg_made-1200@2x.png"],"images/section02/bkg/bkg_made-1200@2x.png"],"F:\\projects\\new-project-blended_1\\src\\images\\location-icons\\location-bg-desktop@2x.png":[["location-bg-desktop@2x.38dd514e.png","images/location-icons/location-bg-desktop@2x.png"],"images/location-icons/location-bg-desktop@2x.png"],"F:\\projects\\new-project-blended_1\\src\\images\\location-icons\\location-bg-desktop@1x.png":[["location-bg-desktop@1x.d1066ca3.png","images/location-icons/location-bg-desktop@1x.png"],"images/location-icons/location-bg-desktop@1x.png"],"F:\\projects\\new-project-blended_1\\src\\images\\location-icons\\location-bg-desktop.svg":[["location-bg-desktop.8d033265.svg","images/location-icons/location-bg-desktop.svg"],"images/location-icons/location-bg-desktop.svg"],"_css_loader":"../node_modules/parcel-bundler/src/builtins/css-loader.js"}],"index.js":[function(require,module,exports) {
-"use strict";
-
-require("./sass/main.scss");
-},{"./sass/main.scss":"sass/main.scss"}],"../node_modules/parcel-bundler/src/builtins/hmr-runtime.js":[function(require,module,exports) {
+    mobileMenuRef.classList.toggle('is-open');
+  });
+})();
+},{}],"../node_modules/parcel-bundler/src/builtins/hmr-runtime.js":[function(require,module,exports) {
 var global = arguments[3];
 var OVERLAY_ID = '__parcel__error__overlay__';
 var OldModule = module.bundle.Module;
@@ -397,5 +346,5 @@ function hmrAcceptRun(bundle, id) {
     return true;
   }
 }
-},{}]},{},["../node_modules/parcel-bundler/src/builtins/hmr-runtime.js","index.js"], null)
-//# sourceMappingURL=/src.e31bb0bc.js.map
+},{}]},{},["../node_modules/parcel-bundler/src/builtins/hmr-runtime.js","js/burger.js"], null)
+//# sourceMappingURL=/burger.01103fb5.js.map
