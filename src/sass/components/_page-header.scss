@@ -1,6 +1,14 @@
 .header {
   @include container(flex, flex-start, center);
-  height: 50px;
+  padding-top: 37px;
+
+  @include for-size(mobile-only) {
+    padding-top: 10px;
+  }
+
+  @include for-size(mobile) {
+    padding-top: 6px;
+  }
 
   &__logo {
     @include container(flex, flex-start, flex-end);
