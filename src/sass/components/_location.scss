@@ -40,7 +40,7 @@
    width: 220px;
    height: 437px;
    padding: 43px 21px 43px 20px;
-
+   box-shadow: 0px 8px 30px rgba(212, 20, 67, 0.1);
 
    margin-bottom: 20px;
    border-radius: 24px;
@@ -48,7 +48,9 @@
    &:focus,
    &:hover,
    &:active {
-      box-shadow: 0px 8px 30px rgba(212, 20, 67, 0.1);
+      box-shadow: 0px 8px 30px rgba(243, 99, 135, 0.397);
+      transform: scale(1.05);
+      transition: 250ms;
    }
    
 
@@ -113,13 +115,13 @@
    min-height: 16px;
    background-color: #F0D1A5;
 
-   @media screen and(min-width: 768px) and(max-width: 1219px) {
+   @media screen and(min-width: 768px) {
       width: 73px;
       height: 28px;
    }
   }
 
-  @media screen and(min-width: 768px) and(max-width: 1219px) {
+  @media screen and(min-width: 768px) {
      font-size: 16px;
      margin-bottom: 30px;
   }
@@ -135,7 +137,7 @@
   min-height: 16px;
   background-color: #C2E297;
 
-  @media screen and(min-width: 768px) and(max-width: 1219px) {
+  @media screen and(min-width: 768px) {
      width: 138px;
      height: 28px;
   }
@@ -299,8 +301,11 @@
    }
 }
 
+.location-btn:focus,
 .location-btn:hover {
     background-color: #C7133E;
+    transform: scale(1.10);
+    transition: 300ms;
  }
 
 .location-btn.white {
@@ -316,9 +321,11 @@ background-color: #fff;
 }
 }
 
+.location-btn.white:focus,
 .location-btn.white:hover {
   background-color: $button-bcg;
-  
+  transform: scale(1.10);
+  transition: 300ms;
 }
 
 .location-btn-text-pink {
