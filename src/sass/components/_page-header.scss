@@ -15,7 +15,7 @@
     margin-right: auto;
 
     @include for-size(desktop) {
-      margin-left: -15px;
+      margin-left: -70px;
       margin-right: 0;
     }
   }
@@ -30,8 +30,8 @@
       @include container(flex, flex-start, center);
       flex-direction: row;
       width: 541px;
-      margin-left: 110px;
-      margin-right: 110px;
+      margin-left: 95px;
+      margin-right: 95px;
     }
   }
 
